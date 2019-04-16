@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ваш дом. Агентство домашнего персонала</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/book_antiqua.css">
+
+    <link rel="stylesheet" href="libs/select/jquery.formstyler.css">
+    <link rel="stylesheet" href="libs/select/jquery.formstyler.theme.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="main-header">
+
+            <div class="main-header__wrapper">
+                <p class="main-header__phone" x-ms-format-detection="none">8 (4872) 31-13-45</p>
+
+                <div class="main-header__request-wrapper">
+                    <a href="#" class="button main-header__button modal__opener--request">Оставить заявку</a>
+                    <a href="#" class="button main-header__button modal__opener--cv">Отправить резюме</a>
+                </div>
+
+                <section class="modal modal-request">
+                    <h2 class="visually-hidden">Оставить заявку</h2>
+                    <form class="form" action="#" method="post">
+                        <p class="form__item">
+                            <label for="fio-request" class="visually-hidden">ФИО</label>
+                            <input class="form__input" type="text" id="fio-request" name="fio" placeholder="ФИО" aria-label="ФИО">
+                        </p>
+                        <p class="form__item">
+                            <label for="phone-request" class="visually-hidden">ФИО</label>
+                            <input class="form__input" type="text" id="phone-request" name="phone" placeholder="Телефон" aria-label="Номер телефона">
+                        </p>
+                        <p class="form__item">
+                            <select class="form__select--position-request" name="position" class="" aria-label="Должность" data-placeholder="Должность">
+                                <option></option>
+                                <option value="0">Репетитор</option>
+                                <option value="1">Гувернантка</option>
+                                <option value="2">Няня</option>
+                                <option value="3">Водитель</option>
+                                <option value="4">Садовник</option>
+                            </select>
+                        </p>
+                        <p class="form__item">
+                            <select class="form__select--schedule-request" name="time" aria-label="График работы" data-placeholder="График работы">
+                                <option></option>
+                                <option value="0">Полный день</option>
+                                <option value="1">Пол дня</option>
+                                <option value="2">Несколько часов</option>
+                                <option value="3">Круглосуточно</option>
+                            </select>
+                        </p>
+                        <p class="form__item">
+                            <textarea class="form__input form__input--textarea">Дополнительная информация</textarea>
+                        </p>
+                        <p class="form__item--submit">
+                            <button class="button form__submit" type="submit">Отправить</button>
+                        </p>
+                    </form>
+                </section>
+
+                <section class="modal modal-cv">
+                    <h2 class="visually-hidden">Отправить резюме</h2>
+                    <form action="#" class="form" method="post">
+
+                        <p class="form__item">
+                            <label for="fio-cv" class="visually-hidden">ФИО</label>
+                            <input class="form__input" id="fio-cv" type="text" name="fio" placeholder="ФИО">
+                        </p>
+
+                        <p class="form__item">
+                            <label for="phone-cv" class="visually-hidden">Номер телефона</label>
+                            <input class="form__input" id="phone-cv" type="text" name="phone" placeholder="Телефон">
+                        </p>
+
+                        <p class="form__item">
+                            <select class="form__select--position-cv" name="position" aria-label="Должность" data-placeholder="Должность">
+                                <option></option>
+                                <option value="0">Репетитор</option>
+                                <option value="1">Гувернантка</option>
+                                <option value="2">Няня</option>
+                                <option value="3">Водитель</option>
+                                <option value="4">Садовник</option>
+                            </select>
+                        </p>
+
+                        <p class="form__item">
+                            <label for="education-cv" class="visually-hidden">Образование</label>
+                            <input class="form__input" id="education-cv" type="text" name="education" placeholder="Образование" aria-label="Образование">
+                        </p>
+
+                        <p class="form__item">
+                            <div class="form__file">
+                                <label class="form__file-label">
+                                    <input class="form__file-input" type="file" name="file" id="upload-file">
+                                    <span id="file-name">Прикрепить резюме</span>
+                                </label>
+                            </div>
+                        </p>
+
+                        <p class="form__item--submit">
+                            <button class="button form__submit" type="submit">Отправить</button>
+                        </p>
+
+                    </form>
+                </section>
+            </div>
+
+            <nav class="main-nav">
+
+                <ul class="main-nav__list">
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="#">Главная</a>
+                    </li>
+
+                    <li class="main-nav__item modal__anchor">
+                        <a class="main-nav__link modal__opener--staff" href="#">Подобрать персонал</a>
+
+                        <ul class="modal modal-staff__list">
+                            <li class="modal-staff__item">
+                                <a class="modal-staff__link" href="#">О нас</a>
+                            </li>
+                            <li class="modal-staff__item">
+                                <a class="modal-staff__link" href="#">Задать вопрос</a>
+                            </li>
+                            <li class="modal-staff__item">
+                                <a class="modal-staff__link" href="#">Это интересно</a>
+                            </li>
+                            <li class="modal-staff__item">
+                                <a class="modal-staff__link" href="#">Отзывы</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="#">Цены</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="#">Оставить<br>заявку</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="#">Оставить вакансию</a>
+                    </li>
+                    <li class="main-nav__item">
+                        <a class="main-nav__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <a href="#"><img class="logo__image" src="img/logo.png" alt="Агенство домашнего персонала Ваш дом"></a>
+            <a href="#"><img class="logo__text" src="img/logo-text.png" alt="Экономьте время в Вашем доме"></a>
+
+        </header>
+
+        <main class="main-content">
+            <h1 class="visually-hidden">Агентство домашнего персонала "Ваш дом"</h1>
+
+            <section class="gallery">
+                <h2 class="visually-hidden">Галлерея</h2>
+
+                <ul class="gallery__list">
+                    <li class="gallery__item gallery__item--active">
+                        <img src="img/gallery1.jpg" alt="Картинка галлереи 1">
+                    </li>
+                    <li class="gallery__item">
+                        <img src="img/gallery2.jpg" alt="Картинка галлереи 2">
+                    </li>
+                    <li class="gallery__item">
+                        <img src="img/gallery3.jpg" alt="Картинка галлереи 3">
+                    </li>
+                    <li class="gallery__item">
+                        <img src="img/gallery4.jpg" alt="Картинка галлереи 4">
+                    </li>
+                    <li class="gallery__item">
+                        <img src="img/gallery5.jpg" alt="Картинка галлереи 5">
+                    </li>
+                    <li class="gallery__item">
+                        <img src="img/gallery6.jpg" alt="Картинка галлереи 6">
+                    </li>
+                </ul>
+                <ul class="gallery__buttons">
+                    <li class="gallery__button-wrapper"><button class="gallery__button gallery__button--active" type="button"></button></li>
+                    <li class="gallery__button-wrapper"><button class="gallery__button" type="button"></button></li>
+                    <li class="gallery__button-wrapper"><button class="gallery__button" type="button"></button></li>
+                    <li class="gallery__button-wrapper"><button class="gallery__button" type="button"></button></li>
+                    <li class="gallery__button-wrapper"><button class="gallery__button" type="button"></button></li>
+                    <li class="gallery__button-wrapper"><button class="gallery__button next" type="button"></button></li>
+                </ul>
+            </section>
+
+            <div class="staff">
+                <section class="staff__permanent">
+                    <h2 class="visually-hidden">Постоянный персонал</h2>
+
+                    <div class="staff__image-container staff__image-container--permanent">
+                        <div class="staff__round-figure staff__round-figure--permanent"></div>
+                        <figure class="staff__image--permanent">
+                            <img src="img/house.png" alt="Постоянный персонал">
+                        </figure>
+                    </div>
+
+                    <div class="staff__header">
+                        <img src="img/permanent-staff.png" alt="Постоянный персонал">
+                    </div>
+
+                    <p class="staff__text">
+                        Наличие в доме обслуживающего персонала - водителя, няни, гувернантки, горничной, домработницы - это вовсе не дань моде и не причуды избалованных нежданно свалившимся богатством нуворишей. Напротив, услугами сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени.
+                    </p>
+                    <a href="#" class="button staff__button staff__button--permanent">Подробнее</a>
+                </section>
+
+                <section class="staff__temporary">
+                    <h2 class="visually-hidden">Временный персонал</h2>
+
+                    <div class="staff__image-container staff__image-container--temporary">
+                        <div class="staff__round-figure staff__round-figure--temporary"></div>
+                        <figure class="staff__image--temporary">
+                            <img src="img/clock.png" alt="Временный персонал">
+                        </figure>
+                    </div>
+
+                    <div class="staff__header staff__header--temporary">
+                        <img src="img/temporary-staff.png" alt="Временный перснал">
+                    </div>
+
+                    <p class="staff__text">
+                        Наличие в доме обслуживающего персонала - водителя, няни, гувернантки, горничной, домработницы - это вовсе не дань моде и не причуды избалованных нежданно свалившимся богатством нуворишей. Напротив, услугами сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени.
+                    </p>
+                    <a href="#" class="button staff__button">Подробнее</a>
+                </section>
+            </div>
+
+            <section class="workers">
+                <h2 class="visually-hidden">Наши сотрудники за работой</h2>
+                <ul class="workers__list">
+                    <li class="workers__item">
+                        <img src="img/content1.jpg" alt="Наши сотрудники за работой">
+                    </li>
+                    <li class="workers__item">
+                        <img src="img/content2.jpg" alt="Наши сотрудники за работой">
+                    </li>
+                    <li class="workers__item">
+                        <img src="img/content3.jpg" alt="Наши сотрудники за работой">
+                    </li>
+                    <li class="workers__item">
+                        <img src="img/content4.jpg" alt="Наши сотрудники за работой">
+                    </li>
+                </ul>
+            </section>
+
+            <section class="main-text">
+                <h2 class="main-text__header">Заголовок</h2>
+                <p class="main-text__paragraph">
+                    Наличие в доме обслуживающего персонала - водителя, няни, гувернантки, горничной, домработницы - это вовсе не дань моде и не причуды избалованных нежданно свалившимся богатством нуворишей. Напротив, услугами сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени
+                    Наличие в доме обслуживающего персонала - водителя, няни, гувернантки, горничной, домработницы - это вовсе не дань моде и не причуды избалованных нежданно свалившимся богатством нуворишей. Напротив, услугами сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени
+                </p>
+                <p class="main-text__paragraph">
+                    Наличие в доме обслуживающего персонала - водителя, няни, гувернантки, горничной, домработницы - это вовсе не дань моде и не причуды избалованных нежданно свалившимся богатством нуворишей. Напротив, услугами сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени. Люди, для которых важно не только вырастить ребенка, но и создать основу будущего благосостояния, построив свою карьеру - вот основная категорий заказчиков, которые ежедневно пользуются услугами нашей компании по подбору домашнего персонала.
+                    Заказ няни, сиделки или домработницы является благом не только для женщины, которая имеет возможность строить свою карьеру или получить, наконец, передышку от выполнения бесконечных домашних обязанностей, но и для всех остальных членов семьи, которые могут провести вместе свободный вечер или выходные. А доступные цены, которые устанавливает на свои услуги наша компания, и предлагаемый нами широкий выбор различных категорий домашнего персонала делают исключительно удобным и, главное, безопасным процесс поиска няни для малыша, сиделки для пожилых членов семьи или домработницы для квартиры или загородного особняка.             </p>
+                <p class="main-text__paragraph">
+                    Наличие в доме обслуживающего персонала - водителя, няни, гувернантки, горничной, домработницы - это вовсе не дань моде и не причуды избалованных нежданно свалившимся богатством нуворишей. Напротив, услугами сиделки или няни пользуются сегодня те, кто отлично знает цену деньгам и своему времени. Люди, для которых важно не только вырастить ребенка, но и создать основу
+                </p>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+
+            <ul class="main-footer__nav">
+                <li class="main-footer__nav-item">
+                    <a class="main-footer__nav-link" href="#">Главная</a>
+                </li>
+                <li class="main-footer__nav-item">
+                    <a class="main-footer__nav-link" href="#">Подобрать персонал</a>
+                </li>
+                <li class="main-footer__nav-item">
+                    <a class="main-footer__nav-link" href="#">Цены</a>
+                </li>
+                <li class="main-footer__nav-item">
+                    <a class="main-footer__nav-link" href="#">Главная</a>
+                </li>
+                <li class="main-footer__nav-item">
+                    <a class="main-footer__nav-link" href="#">Подобрать персонал</a>
+                </li>
+                <li class="main-footer__nav-item main-footer__nav-item--last">
+                    <a class="main-footer__nav-link" href="#">Цены</a>
+                </li>
+            </ul>
+
+            <div class="main-footer__contacts">
+
+                <img class="main-footer__phone" src="img/phone-number.png" alt="Контантный телефон: 8 (4872) 31-13-45">
+
+                <p class="main-footer__copyright">
+                    <span class="main-footer__copyright-text">Разработка и продвижение сайта компанией "Юни Веб" -</span>
+                    <a href="#" class="main-footer__copyright-link">
+                        <img src="img/logo-uw.png" width="70px" height="26px" alt="Разработка и продвижение сайтов: Юни Веб">
+                    </a>
+                </p>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="libs/select/jquery.formstyler.min.js"></script></head>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

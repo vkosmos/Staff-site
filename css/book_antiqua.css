@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'Book Antiqua';
+	src: url('../fonts/book_antiqua.eot');
+	src: url('../fonts/book_antiqua.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/book_antiqua.woff2') format('woff2'),
+		url('../fonts/book_antiqua.ttf') format('truetype');
+}
